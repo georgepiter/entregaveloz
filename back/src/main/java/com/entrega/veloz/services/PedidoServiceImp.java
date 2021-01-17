@@ -1,3 +1,4 @@
+/* Classe de serviço implemntação */
 package com.entrega.veloz.services;
 
 import com.entrega.veloz.domain.Pedido;

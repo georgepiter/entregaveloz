@@ -1,3 +1,4 @@
+/* Classe DTO */
 package com.entrega.veloz.dto;
 
 import java.io.Serializable;
@@ -14,6 +15,8 @@ public class PedidoDto implements Serializable {
     private Date transporte;
     private Date entrega;
     private String observacao;
+
+    /* Contrutores, get e sets, hashCode e Equals, ToString */
 
     public PedidoDto() {
     }

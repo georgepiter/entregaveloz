@@ -1,3 +1,4 @@
+   /* Classe de configuração do cors permitindo as requisições pelo front em localhost porta 4200. */
 package com.entrega.veloz.config;
 
 import org.springframework.context.annotation.Configuration;

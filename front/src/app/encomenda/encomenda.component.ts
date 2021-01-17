@@ -35,7 +35,7 @@ export class EncomendaComponent implements OnInit {
     this.loadCliente();
 
   }
-
+  
   loadPedido(): any {
     this.spinner.show();
     this.velozService.getEncomendaRastreio(this.codigo)

@@ -1,3 +1,4 @@
+/* Classe Restcontroller ou Endpoint */
 package com.entrega.veloz.resources;
 
 import javax.persistence.EntityManager;

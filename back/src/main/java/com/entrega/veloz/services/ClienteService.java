@@ -1,3 +1,4 @@
+/* Classe de serviço principal */
 package com.entrega.veloz.services;
 
 import com.entrega.veloz.domain.Cliente;

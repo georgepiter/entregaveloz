@@ -1,3 +1,4 @@
+/* Classe DTO */
 package com.entrega.veloz.dto;
 
 import java.io.Serializable;
@@ -22,6 +23,8 @@ public class ClienteDto implements Serializable {
     private Integer numero;
 
     private List<PedidoDto> pedidos = new ArrayList<>();
+
+    /* Contrutores, get e sets, hashCode e Equals, ToString */
 
     public ClienteDto() {
     }

@@ -1,3 +1,4 @@
+   /* Classe  de entidade pedido */
 package com.entrega.veloz.domain;
 
 import java.io.Serializable;
@@ -14,7 +15,9 @@ import javax.persistence.Table;
 public class Pedido implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
+
+    /* Mapeamento de classe */
+
     @ManyToOne
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
@@ -34,7 +37,9 @@ public class Pedido implements Serializable {
 
     @Column(name = "observacao")
     private String observacao;
-   
+
+    /* Contrutores, get e sets, hashCode e Equals, ToString */
+
     public Pedido(Long id, Date postagem, Date transporte, Date entrega, String observacao) {
         this.id = id;
         this.postagem = postagem;

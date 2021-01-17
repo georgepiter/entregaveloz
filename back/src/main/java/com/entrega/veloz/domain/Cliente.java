@@ -1,3 +1,4 @@
+   /* Classe de de entidade cliente */
 package com.entrega.veloz.domain;
 
 import java.io.Serializable;
@@ -17,6 +18,8 @@ public class Cliente implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
+       /* Mapeamento de classe */
+
     @OneToMany(mappedBy = "cliente")
 	private List<Pedido> pedido = new ArrayList<>();
 
@@ -58,7 +61,10 @@ public class Cliente implements Serializable {
     
     public void setPedidos(List<Pedido> pedidos) {
 		this.pedido = pedidos;
-	}
+    }
+    
+       /* Contrutores, get e sets, hashCode e Equals, ToString */
+
 
     public Cliente() {
     }
