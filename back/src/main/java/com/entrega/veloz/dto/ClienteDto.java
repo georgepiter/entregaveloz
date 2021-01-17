@@ -4,48 +4,46 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
 import com.entrega.veloz.domain.Cliente;
 
 public class ClienteDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Long id;    
+    private Long id;
     private String nome;
     private String telefone;
     private String cpf;
-    private String endereco;    
+    private String endereco;
     private String bairro;
     private String cep;
-    private String estado;    
+    private String estado;
     private String cidade;
     private Integer numero;
-    
+
     private List<PedidoDto> pedidos = new ArrayList<>();
 
     public ClienteDto() {
     }
-    
+
     public ClienteDto(Cliente clienteDtoObj) {
 
-    id = clienteDtoObj.getId();
-    nome = clienteDtoObj.getNome();
-    endereco = clienteDtoObj.getEndereco();
-    bairro = clienteDtoObj.getBairro();
-    cep = clienteDtoObj.getCep();
-    estado = clienteDtoObj.getEstado();
-    cidade = clienteDtoObj.getCidade();
-    numero = clienteDtoObj.getNumero();
-    
-    this.pedidos = clienteDtoObj.getPedidos().stream().map(e -> new PedidoDto(e)).collect(Collectors.toList());
+        id = clienteDtoObj.getId();
+        nome = clienteDtoObj.getNome();
+        endereco = clienteDtoObj.getEndereco();
+        bairro = clienteDtoObj.getBairro();
+        cep = clienteDtoObj.getCep();
+        estado = clienteDtoObj.getEstado();
+        cidade = clienteDtoObj.getCidade();
+        numero = clienteDtoObj.getNumero();
 
+        this.pedidos = clienteDtoObj.getPedidos().stream().map(e -> new PedidoDto(e)).collect(Collectors.toList());
+        
     }
 
     public Long getId() {
         return id;
     }
-
 
     public String getNome() {
         return nome;
@@ -118,6 +116,13 @@ public class ClienteDto implements Serializable {
     public void setNumero(Integer numero) {
         this.numero = numero;
     }
+    public List<PedidoDto> getPedidos() {
+        return pedidos;
+    }
+
+    public void setPedidos(List<PedidoDto> pedidos) {
+        this.pedidos = pedidos;
+    }
 
     @Override
     public String toString() {
@@ -125,12 +130,6 @@ public class ClienteDto implements Serializable {
                 + endereco + ", estado=" + estado + ", id=" + id + ", nome=" + nome + ", numero=" + numero
                 + ", telefone=" + telefone + "]";
     }
-
-
-    
-
-    
-
 
 }  
    

@@ -3,7 +3,6 @@ package com.entrega.veloz.domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -189,8 +188,5 @@ public class Cliente implements Serializable {
                 + cpf + ", endereco=" + endereco + ", estado=" + estado + ", id=" + id + ", nome=" + nome
                 + ", telefone=" + telefone + "]";
     }
-
-	
-
     
 }

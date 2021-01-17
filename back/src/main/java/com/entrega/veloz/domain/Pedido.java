@@ -2,7 +2,6 @@ package com.entrega.veloz.domain;
 
 import java.io.Serializable;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -35,7 +34,6 @@ public class Pedido implements Serializable {
 
     @Column(name = "observacao")
     private String observacao;
-
    
     public Pedido(Long id, Date postagem, Date transporte, Date entrega, String observacao) {
         this.id = id;
@@ -50,10 +48,6 @@ public class Pedido implements Serializable {
 
     public Long getId() {
         return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public Date getPostagem() {
@@ -118,7 +112,6 @@ public class Pedido implements Serializable {
         return "Pedido [entrega=" + entrega + ", id=" + id + ", observacao=" + observacao + ", postagem=" + postagem
                 + ", transporte=" + transporte + "]";
     }
-
     
 }
 

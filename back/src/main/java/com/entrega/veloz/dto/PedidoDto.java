@@ -25,9 +25,9 @@ public class PedidoDto implements Serializable {
     transporte = pedidoDtoObj.getTransporte();
     entrega = pedidoDtoObj.getEntrega();
     observacao = pedidoDtoObj.getObservacao();
-
-    }
-
+    
+    } 
+    
     public Date getPostagem() {
         return postagem;
     }
@@ -60,13 +60,14 @@ public class PedidoDto implements Serializable {
         this.observacao = observacao;
     }
 
-    @Override
-    public String toString() {
-        return "PedidoDto [entrega=" + entrega + ", id=" + id + ", observacao=" + observacao + ", postagem=" + postagem
-                + ", transporte=" + transporte + "]";
+    public Long getId() {
+        return id;
     }
- 
 
-
+	@Override
+	public String toString() {
+		return "PedidoDto [entrega=" + entrega + ", id=" + id + ", observacao=" + observacao + ", postagem=" + postagem
+				+ ", transporte=" + transporte + "]";
+	}   
 
 }

@@ -4,7 +4,6 @@ import javax.persistence.EntityManager;
 import com.entrega.veloz.domain.Cliente;
 import com.entrega.veloz.dto.ClienteDto;
 import com.entrega.veloz.services.ClienteService;
-
 import javax.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

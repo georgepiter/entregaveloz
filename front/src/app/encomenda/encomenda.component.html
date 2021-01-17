@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="container">
+    <h3 class="title">Rastrear Encomenda: <span class="title-1">{{ pedido?.id }}</span></h3>
+    <div class="row">
+      <div class="col-md-10">
+        <div class="main-timeline4">
+    
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="year">
+                <fa-icon [icon]="icons[0]"></fa-icon>
+              </span>
+              <div class="inner-content">
+                <h3 class="title">Postagem: {{ pedido?.postagem | date :'dd/MM/yyyy h:mm:ss' }}</h3>
+                <p class="description">
+                  O pedido foi postado. </p>
+              </div>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="year">
+                <fa-icon [icon]="icons[1]"></fa-icon>
+              </span>
+              <div class="inner-content">
+                <h3 class="title">
+                  Transporte:<br>{{ pedido?.transporte  | date :'dd/MM/yyyy h:mm:ss' }}
+                </h3>
+                <p class="description">                 
+                  {{  pedido?.transporte? ' Pedido em rota de entrega. ' : 'Pedido não foi para o transporte' }}
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="timeline">
+            <a href="#" class="timeline-content">
+              <span class="year">
+                <fa-icon [icon]="!pedido?.entrega? icons[3]:icons[2]"></fa-icon>
+              </span>
+              <div class="inner-content">
+                <h3 class="title">{{ !pedido?.entrega? 'Entrega não realizada' : 'Entregue:' }}</h3>
+                <h3 class="title">{{ pedido?.entrega  | date :'dd/MM/yyyy h:mm:ss' }}</h3>
+                <p class="description">
+                  {{ pedido?.observacao? pedido?.observacao : 'sem observação'}}
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+ <div class="row voltar">
+      <a routerLink="/rastreio">
+        << Voltar </a> </div> 
+      
+      </div> 
+</body>
+
+</html>
