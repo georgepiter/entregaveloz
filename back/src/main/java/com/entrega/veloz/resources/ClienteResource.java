@@ -5,6 +5,9 @@ import javax.persistence.EntityManager;
 import com.entrega.veloz.domain.Cliente;
 import com.entrega.veloz.dto.ClienteDto;
 import com.entrega.veloz.services.ClienteService;
+import com.entrega.veloz.services.ClienteServiceImp;
+
+
 import javax.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -19,14 +22,14 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClienteResource {
 
     @Autowired
-    private ClienteService clienteService;
+    private ClienteServiceImp clienteServiceImp;
 
     @PersistenceContext
     private EntityManager manager;
 
     @GetMapping("/{id}")
     public ClienteDto clientesDto(@PathVariable Long id) {
-        Cliente cliente = this.clienteService.buscarClientePorId(id);
+        Cliente cliente = this.clienteServiceImp.buscarClientePorId(id);
         return new ClienteDto(cliente);
     }
  }
