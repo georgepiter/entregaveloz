@@ -2,13 +2,12 @@
 package com.entrega.veloz.resources;
 
 import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import com.entrega.veloz.domain.Cliente;
 import com.entrega.veloz.dto.ClienteDto;
-import com.entrega.veloz.services.ClienteService;
 import com.entrega.veloz.services.ClienteServiceImp;
 
-
-import javax.persistence.PersistenceContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
