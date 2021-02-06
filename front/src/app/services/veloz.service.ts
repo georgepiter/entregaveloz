@@ -4,8 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.prod';
 
-const url = process.env.API_URL;
-
+const url = URL
 @Injectable({
   providedIn: 'root'
 })
