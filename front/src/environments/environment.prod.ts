@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  API_URL: 'URL'
+  API_URL: 'URL',
 };
 
 
