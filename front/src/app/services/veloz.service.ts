@@ -12,7 +12,7 @@ export class VelozService {
   constructor(private http: HttpClient) { }
 
   getEncomendaRastreio(codigo: string): Observable<any> {
-    return this.http.get(this.API_URL + `pedido/`+ codigo);
+    return this.http.get(this.API_URL + `/pedido/`+ codigo);
   }
 }
 
