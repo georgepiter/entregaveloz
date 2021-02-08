@@ -119,10 +119,17 @@
               "devServerTarget": "front:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/front",
+            "netlifyToken": "",
+            "siteId": "eac2ebf7-07df-4375-b5cd-f21de24f4027"
+          }
         }
       }
     }
   },
   "defaultProject": "front"
-  
 }
