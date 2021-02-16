@@ -7,7 +7,7 @@
 ## 💻 O projeto foi desenvolvido em:
 
 - [x] Banco de dados - PostGresql
-- [x] Back End - Java com Spring Boot
+- [x] Back End - Java com Spring Boot -- Implantado no Heroku
 - [x] Front End Web - Angular 
 
 ## 💻 Pré-requisitos
